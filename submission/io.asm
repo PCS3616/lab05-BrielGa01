@@ -21,6 +21,7 @@ LD SOMA      ; Carrega o valor da soma
 AD NUM_ASCII ; Adiciona /3030 para representar a soma em ascii
 MM SOMA      ; Armazena a soma em ascii
 PD /100      ; Mostra a soma no monitor
+PD /300      ; Armazena o resultado no disco
 HM /000      ; Encerra a execucao
 
 @ /100
@@ -30,6 +31,7 @@ AD SHIFT     ; Soma /0100
 AD NUM_ASCII ; Transforma o valor para ascii
 MM SOMA      ; Armazena a soma
 PD /100      ; Mostra a soma no monitor
+PD /300      ; Armazena o resultado no disco
 HM /000      ; Encerra a execucao
 
 @ /F00
