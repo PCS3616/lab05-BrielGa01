@@ -2,11 +2,8 @@ GD /000      ; Carrega x do teclado para o acumulador
 SB NUM_ASCII ; Subtrai /3030 
 MM X         ; Armazena em X
 GD /000      ; Carrega um espaco e um digito de Y
-ML SHIFT     ; Desloca para a esquerda para se livrar do espaco
-MM Y         ; Armazena o valor descolcado em y
 GD /000      ; Le o segundo digito de y e um LF
-DV SHIFT     ; Desloca para a direita
-AD Y         ; Soma os dois para criar y com dois digitos
+MM Y         ; Armazena o valor descolcado em y
 SB NUM_ASCII ; subtrai /3030
 MM Y         ; Armazena o valor em Y
 AD X         ; Soma y e x
@@ -21,7 +18,6 @@ LD SOMA      ; Carrega o valor da soma
 AD NUM_ASCII ; Adiciona /3030 para representar a soma em ascii
 MM SOMA      ; Armazena a soma em ascii
 PD /100      ; Mostra a soma no monitor
-PD /300      ; Armazena o resultado no disco
 HM /000      ; Encerra a execucao
 
 @ /100
@@ -31,7 +27,6 @@ AD SHIFT     ; Soma /0100
 AD NUM_ASCII ; Transforma o valor para ascii
 MM SOMA      ; Armazena a soma
 PD /100      ; Mostra a soma no monitor
-PD /300      ; Armazena o resultado no disco
 HM /000      ; Encerra a execucao
 
 @ /F00
@@ -41,4 +36,4 @@ Y        k =0    ; Valor de y
 SOMA     K =0    ; Resultado da soma
 X1       k =0    ; Algarismo menos significativo da soma
 COMP     k /A    ; Valor para comparacao do algoritmo
-NUM_ASCII K /3030 ; Para converter os valores para ascii
+NUM_ASCII K /3030 ; Para converter os valores para asciifilecode
